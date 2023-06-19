@@ -1,0 +1,17 @@
+
+.p-menubar ul {
+    margin-left: auto;
+}
+
+.p-menuitem * {
+    color: red;
+}
+
+.p-menubar {
+    /* background-color: rgba(black, black, black, 0.85); */
+    border-color: transparent;
+    background-color: rgba( 0,  0,  0, 0.25);
+    font-weight: bolder;
+    position: relative;
+    z-index: 100;
+}
