@@ -1,2 +1,11 @@
 
 export * from './Navbar/NavBar'
+export * from './Header/Header'
+export * from './Footer/Footer'
+export * from './Body/Body'
+export * from './Menu/Menu'
+export * from './VideoPlayer/VideoPlayer'
+export * from './Container/Container'
+export * from './UserCard/UserCard'
+export * from './Calories/CaloriesCard'
+export * from './FormMaker'

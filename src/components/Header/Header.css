@@ -1,0 +1,19 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .p-menubar {
+    /* background-color: rgba(black, black, black, 0.85); */
+    border-radius: 0;
+    background-color: rgba( 59, 130, 246, 1);
+    font-weight: bolder;
+    position: relative;
+    z-index: 100;
+}
+
+.p-button.label {
+    color: white;
+}
