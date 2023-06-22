@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { Container, VideoPlayer } from '../../components';
 import { Button } from 'primereact/Button';
+import { useNavigate } from 'react-router-dom';
         
         
 
 export const HomePage = () => {
+
+  const navigate = useNavigate()
+
 
   const btn = [ <Button label='Login' icon='pi pi-user' /> ]
   return (
@@ -21,7 +25,7 @@ export const HomePage = () => {
         </div>
 
         <div className='flex-center w-full my-6'>
-          <Button label="Start now" outlined />
+          <Button label="Start now" outlined onClick={() => navigate('/calories')} />
         </div>
       </section>
 

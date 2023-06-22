@@ -51,19 +51,22 @@ export const CaloriesPage = () => {
 
       {
         calories != 0 &&
-        <div className='flex-center gap-8'>
-        <h2 className='text-center my-4 text-6xl'>
-          <CountUp start={0} end={calories} duration={1.5} className='text-blue-600'/> cal / day
-        </h2>
-        {
-          !!username && 
-          <Button label='Set to me' onClick={() => {
-            setCal(calories)
-            toast.current?.show({ severity: 'success', summary: 'Succes', detail: 'Calories setted' });
-          } 
-          } />
-        }
-        </div>
+        <>
+          <h2 className='text-center my-4 text-6xl'>
+            <CountUp start={0} end={calories} duration={1.5} className='text-blue-600'/> cal / day
+          </h2>
+          {
+              !!username ? 
+              <div className='flex-center'>
+                <Button label='Set to me' 
+                onClick={() => {
+                  setCal(calories)
+                  toast.current?.show({ severity: 'success', summary: 'Succes', detail: 'Calories setted' });
+                }} />
+              </div>
+              : <h3 className='text-red-600 text-center'>Login to set you calories to your plan</h3>
+          }
+        </>
       }
 
       <div className='md:mx-8'>
