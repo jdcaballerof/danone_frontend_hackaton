@@ -3,6 +3,9 @@
 Clone this repo \
 Install dependencies with ```npm i``` \
 Run with ```npm run dev```
+
+## Site
+You can see the site in: https://davidc-danone.netlify.app/
 ## Usage
 Once the project has started, you can view the home page, access the calorie calculator which uses the Harris-Benedict formula and, if you log in, you can save those calories to view them on your profile by clicking on the user icon on the upper right corner of the screen.
 
