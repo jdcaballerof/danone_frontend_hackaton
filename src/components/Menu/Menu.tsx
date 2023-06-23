@@ -15,14 +15,14 @@ interface Props {
 export const Menu = ({start, center, end}:Props) => {
   return (
     <>
-    <div className='bg-blue-500 p-1 flex-center sm:justify-content-between flex-wrap' >
+    <div className='bg-blue-500 p-1 flex-center sm:justify-content-between flex-wrap flex-column lg:flex-row' >
         {/* start */}
-        <div>
+        <div className='w-3' >
           {start}
         </div>
 
         {/* center */}
-        <div>
+        <div className='w-4'>
           {
             !!center && center.length > 0 &&
             <ul className='flex-center flex-wrap sm:flex-nowrap' >
@@ -38,7 +38,7 @@ export const Menu = ({start, center, end}:Props) => {
         </div>
         
         {/* end */}
-        <div className='mr-5'>
+        <div className='mr-5 w-3'>
           {
             !!end && end.length > 0 &&
               <ul className='flex-center gap-4 ' >
