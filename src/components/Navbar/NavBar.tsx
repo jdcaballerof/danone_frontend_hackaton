@@ -22,6 +22,7 @@ export const NavBar = () => {
     const {user, login, logout} = useGeneralContext()
 
     const [visible, setVisible] = useState(false)
+    const [isloginCorrect, setIsLoginCorrect] = useState(true)
 
     const navigate = useNavigate()
 
@@ -61,8 +62,8 @@ export const NavBar = () => {
         console.log(data)
         const {username, passwd} = data
         const res = login(username, passwd)
-        console.log(res)
-        setVisible(false)
+        setIsLoginCorrect(res)
+        setVisible(!res)
     }
 
 
@@ -93,10 +94,14 @@ return (
 
         <Dialog 
             visible={visible} 
-            onHide={() => setVisible(false)}
+            onHide={() => { setVisible(false); setIsLoginCorrect(true) }}
             className='w-12 md:w-6'
         >
             <h2 className='text-2xl text-blue-600 text-center' >Login</h2>
+            {
+                !isloginCorrect &&
+                <p className='text-lg text-red-500 text-center my-4'>User or password is incorrect</p>
+            }
             <FormMaker inputs={loginInputs} forButton={{label:''}} callBackForSubmit={handleSubmit} />
         </Dialog>
     </>

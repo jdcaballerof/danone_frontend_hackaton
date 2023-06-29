@@ -34,12 +34,15 @@ export const GeneralContextProvider: React.FC<Props> = ({ children }) => {
     const users_db = !!users ? JSON.parse(users) : [];  
 
     if(users_db.includes(username)){
-        const userData = localStorage.getItem(username)
-        setUser( JSON.parse(userData!) )
-        isLoging = true
+        const userData = JSON.parse( localStorage.getItem(username)! )
+        console.log(userData)
+        if(userData.passwd == passwd){
+          setUser( userData )
+          isLoging = true
+        }
     }
     else {
-        //login new user
+        // sing up new user
         const data = JSON.stringify({username, passwd})
         const addUser = [...users_db, username]
         localStorage.setItem('users', JSON.stringify(addUser) )

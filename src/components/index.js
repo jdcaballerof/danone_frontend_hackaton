@@ -1,6 +1,6 @@
 
 export * from './Navbar/NavBar'
-export * from './Header/Header'
+// export * from './Header/Header'
 export * from './Footer/Footer'
 export * from './Body/Body'
 export * from './Menu/Menu'
